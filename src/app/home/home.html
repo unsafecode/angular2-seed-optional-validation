@@ -1,0 +1,15 @@
+<h3>Home Component</h3>
+<p>Welcome to Angular Seed</p>
+
+<form [formGroup]="form">
+    <label>
+        Make required
+        <input type="checkbox" formControlName="isRequired" [(ngModel)]="isRequired" />
+    </label>
+    <p>
+        <input type="text" formControlName="yourName" [(ngModel)]="yourName" [dynamicDisable]="!isRequired" />
+    </p>
+    <p>
+        Valid: {{form.valid}}
+    </p>
+</form>
